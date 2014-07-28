@@ -11,6 +11,10 @@ Add this line to your application's Gemfile:
 And then execute:
 
     $ bundle
+    
+To keep your code organized, create a directory “app/presenters” in your project and add this line to your application.rb:
+
+    config.autoload_paths << Rails.root.join("app", "presenters").to_s
 
 ## Для разработчиков (Contributing)
 
