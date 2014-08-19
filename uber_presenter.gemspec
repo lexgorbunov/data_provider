@@ -23,5 +23,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '>= 3.2.12'
   s.add_dependency 'railties', '>= 3.2.6'
-  s.add_dependency 'memoist', '~> 0.9.3'
+  s.add_dependency 'memoist', '>= 0.9.3'
 end

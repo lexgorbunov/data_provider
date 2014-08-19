@@ -1,20 +1,24 @@
 # UberPresenter
 
-UberPresenter это библиотека для огранизации презентеров в проектах на Ruby On Rails
+UberPresenter - библиотека для огранизации презентеров в проектах на Ruby On Rails
 
 ## Установка (Installation)
 
 Add this line to your application's Gemfile:
 
-    gem 'uber-presenter'
+    gem 'uber_presenter'
 
 And then execute:
 
     $ bundle
     
-To keep your code organized, create a directory “app/presenters” in your project and add this line to your application.rb:
+Run:
 
-    config.autoload_paths << Rails.root.join("app", "presenters").to_s
+	$ rails generate uber_presenter:install
+
+For generate presenters, do:
+
+	$ rails generate presenter MyPresenter
 
 ## Для разработчиков (Contributing)
 

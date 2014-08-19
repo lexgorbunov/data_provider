@@ -4,7 +4,7 @@ class PresenterGenerator < Rails::Generators::Base
 
   def generate
     name = presenter_name.singularize
-    create_file "app/presenters/#{name.classify}.rb", <<-FILE
+    create_file "app/presenters/#{name.underscore}.rb", <<-FILE
 class #{name.classify} < UberPresenter::Base
   # def posts
   #  # ...
