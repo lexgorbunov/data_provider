@@ -7,10 +7,11 @@ class PresenterGenerator < Rails::Generators::Base
     create_file "app/presenters/#{name.underscore}.rb", <<-FILE
 class #{name.classify} < UberPresenter::Base
   # def posts
-  #  # ...
+  #   # ...
   # end
+
   # Кэширование результатов
-  # memoist :method
+  # memoize :method
 end
     FILE
   end
