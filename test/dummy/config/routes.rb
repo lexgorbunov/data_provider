@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount UberPresenter::Engine => '/uber_presenter'
+  mount DataProvider::Engine => '/data_provider'
 end

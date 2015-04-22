@@ -1,13 +1,13 @@
-module UberPresenter
+module DataProvider
   class InstallGenerator < Rails::Generators::Base
     source_root File.expand_path('../templates', __FILE__)
 
-    desc 'Включает поддержку презентеров'
+    desc 'Включает поддержку провайдеров'
 
     def install
-      copy_file '.keep', 'app/presenters/.keep'
+      copy_file '.keep', 'app/data_providers/.keep'
       inject_into_file('config/application.rb', after: "class Application < Rails::Application\n") do
-        "    config.autoload_paths << Rails.root.join('app', 'presenters').to_s\n"
+        "    config.autoload_paths << Rails.root.join('app', 'data_providers').to_s\n"
       end
     end
   end

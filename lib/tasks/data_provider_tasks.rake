@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :uber_presenter do
+# task :data_provider do
 #   # Task goes here
 # end

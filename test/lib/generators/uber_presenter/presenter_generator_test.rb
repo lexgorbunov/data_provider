@@ -1,9 +1,9 @@
 require 'test_helper'
-require 'generators/presenter/presenter_generator'
+require 'generators/data_provider/provider_generator'
 
-module UberPresenter
-  class PresenterGeneratorTest < Rails::Generators::TestCase
-    tests PresenterGenerator
+module DataProvider
+  class DataProviderGeneratorTest < Rails::Generators::TestCase
+    tests ProviderGenerator
     destination Rails.root.join('tmp/generators')
     setup :prepare_destination
 

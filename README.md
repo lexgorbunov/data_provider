@@ -1,12 +1,12 @@
-# UberPresenter
+# DataProvider
 
-UberPresenter - библиотека для огранизации презентеров в проектах на Ruby On Rails
+DataProvider - библиотека для огранизации провайдеров данных в проектах на Ruby On Rails
 
 ## Установка (Installation)
 
 Add this line to your application's Gemfile:
 
-    gem 'uber_presenter'
+    gem 'data_provider'
 
 And then execute:
 
@@ -14,11 +14,11 @@ And then execute:
     
 Run:
 
-	$ rails generate uber_presenter:install
+    $ rails generate data_provider:install
 
-For generate presenters, do:
+For generate providers, do:
 
-	$ rails generate presenter MyPresenter
+    $ rails generate data_provider MyProvider
 
 ## Для разработчиков (Contributing)
 

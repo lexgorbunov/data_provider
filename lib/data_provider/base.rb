@@ -1,17 +1,16 @@
-# class UberPresenter::PresenterFactory
-class UberPresenter::Base
+class DataProvider::Base
   extend Memoist
 
   # Доступ к объекту контроллера
   attr_reader :controller
-  delegate :params, :action_name, :controller_name, to: :controller
+  delegate :params, :action_name, :controller_name, :session, :render, to: :controller
 
   class << self
     # Создаем экземпляр презенера, уникальный для объекта controller
     #
     # @param [Object] controller
     # @param [Object] args Набор аргументов для презентора
-    # @return [Object] Экземпляр презентера
+    # @return [Object] Экземпляр провайдера
     #
     def new(controller, *args)
       storage = storage_from(controller)
@@ -24,17 +23,17 @@ class UberPresenter::Base
     # @return [Hash]
     #
     def storage_from(controller)
-      controller.instance_variable_set(:@presenters, {}) unless controller.instance_variable_names.include?('@presenters')
-      controller.instance_variable_get(:@presenters)
+      controller.instance_variable_set(:@data_providers, {}) unless controller.instance_variable_names.include?('@data_providers')
+      controller.instance_variable_get(:@data_providers)
     end
   end
 
-  # Получаем хранилище презенторов
+  # Получаем хранилище провайдеров
   #
   # @return [Hash]
   #
-  def presenters
-    @presenters.present? ? @presenters : self.class.storage_from(controller)
+  def data_providers
+    @data_providers.present? ? @data_providers : self.class.storage_from(controller)
   end
 
   def inspect
